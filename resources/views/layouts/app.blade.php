@@ -44,17 +44,7 @@
   <div class="wrapper">
 
   <header class="main-header">
-    
     <!-- Logo -->
-    <a href="AdminLTE-2.4.2/index2.html" class="logo">
-    <!-- <a class="navbar-brand" href="{{ url('/') }}"> -->
-      <!-- {{ config('app.name', 'Laravel') }}          -->
-      <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>PR1</span>
-      <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>PR1</span>
-    </a>
-    
     <a href="AdminLTE-2.4.2/index2.html" class="logo">
     <!-- <a class="navbar-brand" href="{{ url('/') }}"> -->
       <!-- {{ config('app.name', 'Laravel') }}          -->
@@ -66,9 +56,11 @@
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      <a hlass="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
       </a>
+      
+      
       <div class="navbar-custom-menu">
         <ul class="nav navbar-nav">
           <!-- Messages: style can be found in dropdown.less-->
@@ -135,13 +127,12 @@
           </li>
         </ul>
       </div>
+      
     </nav>
-    
   </header>
+  
+   
     <!-- Left side column. contains the logo and sidebar -->
-    
-    <aside class="main-sidebar"></aside>
-    
     <aside class="main-sidebar">
       <!-- sidebar: style can be found in sidebar.less -->
       <section class="sidebar">
@@ -217,10 +208,6 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       @yield('content-header')
-      @yield('content')
-
-        <h3 class="control-sidebar"></h3>
-
     </section>
       <!-- /.content -->
   </div>
@@ -233,8 +220,6 @@
     reserved.
   </footer>
 
-  
-  
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
@@ -294,10 +279,6 @@
           </li>
         </ul>
         <!-- /.control-sidebar-menu -->
-
-
-        <h3 class="control-sidebar"></h3>
-        @yield('content-header')
 
         <h3 class="control-sidebar-heading">Tasks Progress</h3>
         <ul class="control-sidebar-menu">
@@ -429,7 +410,6 @@
     </div>
   </aside>
   <!-- /.control-sidebar -->
-  
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
