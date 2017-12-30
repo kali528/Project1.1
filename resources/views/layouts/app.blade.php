@@ -346,25 +346,9 @@
 
 				  <!-- Default box -->
 				  <div class="box">
-				    <div class="box-header with-border">
-				      <h3 class="box-title">Title</h3>
-
-				      <div class="box-tools pull-right">
-				        <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-				                title="Collapse">
-				          <i class="fa fa-minus"></i></button>
-				        <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
-				          <i class="fa fa-times"></i></button>
-				      </div>
-				    </div>
-				    <div class="box-body">
+				    
 				    	@yield('content')
-				    </div>
-				    <!-- /.box-body -->
-				    <div class="box-footer">
-				      Footer
-				    </div>
-				    <!-- /.box-footer-->
+				    
 				  </div>
 				  <!-- /.box -->
 
@@ -583,6 +567,9 @@
 		</script>
 		<!-- Bootstrap 3.3.7 -->
 		<script src="AdminLTE-2.4.2/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<!-- DataTables -->
+		<script src="AdminLTE-2.4.2/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+		<script src="AdminLTE-2.4.2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 		<!-- Morris.js charts -->
 		<script src="AdminLTE-2.4.2/bower_components/raphael/raphael.min.js"></script>
 		<script src="AdminLTE-2.4.2/bower_components/morris.js/morris.min.js"></script>
@@ -609,6 +596,22 @@
 		<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 		<script src="AdminLTE-2.4.2/dist/js/pages/dashboard.js"></script>
 		<!-- AdminLTE for demo purposes -->
-	<script src="AdminLTE-2.4.2/dist/js/demo.js"></script>
+		<script src="AdminLTE-2.4.2/dist/js/demo.js"></script>
+		<script>
+			$(function () {
+
+				$('#example1').DataTable({
+				'paging'      : true,
+				'lengthChange': true,
+				'searching'   : true,
+				'ordering'    : true,
+				'info'        : true,
+				'autoWidth'   : false
+				});
+			});
+			$(document).ready(function(){
+				$("#example1_filter").addClass("pull-right");
+			})
+		</script>
 	</body>
 </html>
