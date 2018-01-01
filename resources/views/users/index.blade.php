@@ -25,7 +25,6 @@
                 <tr>
                   <th>Name</th>
                   <th>Email</th>
-                  <th>Actions</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -33,10 +32,6 @@
                 	<tr>
                 		<td>{{ $user->name }}</td>
                 		<td>{{ $user->email }}</td>
-                		<td>
-                			<button class="btn btn-success btn-primary">edit</button>
-                			<button class="btn btn-danger btn-primary">delete</button>
-                		</td>
                 	</tr>
                 @endforeach
                 </tbody>
