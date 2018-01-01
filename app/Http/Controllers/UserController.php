@@ -19,7 +19,7 @@ class UserController extends Controller
 
         return view('users.index', compact('users'));
     }
-//TODO finish user's functionallity 
+
     /**
      * Show the form for creating a new resource.
      *
