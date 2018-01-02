@@ -314,6 +314,11 @@
 				    		<i class="fa fa-pencil-square-o"></i> <span>Invoices</span>
 				    	</a>
 				    </li>
+				    <li>
+				    	<a href="/customers">
+				    		<i class="fa fa-briefcase"></i> <span>Customers</span>
+				    	</a>
+				    </li>
 				    <li class="header">ADMINISTRATION</li>
 					<li>
 				    	<a href="/users">
