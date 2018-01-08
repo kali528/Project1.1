@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Customer;
 
 class CustomerController extends Controller
 {
@@ -13,7 +14,10 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return view('customers.index');    
+        $customer = new Customer;
+        $customers = $customer->getCustomers();
+
+        return view('customers.index', compact('customers'));    
     }
 
     /**
@@ -23,7 +27,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        //
+        return view('customers.create');   
     }
 
     /**
@@ -34,7 +38,7 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request);
     }
 
     /**
