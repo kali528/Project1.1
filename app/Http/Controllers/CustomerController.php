@@ -38,7 +38,21 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request);
+        $customer = new Customer;
+        $customer->name = $request->name; 
+        $customer->bulstad = $request->bulstad;
+        $customer->eik = '0987654321';
+        $customer->mol = $request->mol;
+        $customer->address_id = 1;
+        // $customer->country = $request->country;
+        // $customer->state = $request->state;
+        // $customer->region = $request->region;
+        // $customer->city = $request->city;
+        // $customer->pk = $request->pk;
+        $customer->phone = $request->phone;
+        $customer->email = $request->email;
+        $customer->save();
+        return redirect()->action('CustomerController@index');
     }
 
     /**

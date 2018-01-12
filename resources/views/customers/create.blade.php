@@ -52,9 +52,9 @@
 									      	</div>
 							    		</div>
 							    		<div class="form-group">
-									    	<label for="owner" class="col-sm-2 control-label">Owner</label>
+									    	<label for="mol" class="col-sm-2 control-label">Owner</label>
 									    	<div class="col-sm-10">
-									        	<input type="text" class="form-control" id="owner" name="owner" placeholder="Owner">
+									        	<input type="text" class="form-control" id="mol" name="mol" placeholder="Owner">
 									      	</div>
 							    		</div>
 							    		<div class="form-group">
