@@ -88,6 +88,12 @@
 									      	</div>
 							    		</div>
 							    		<div class="form-group">
+									    	<label for="address1" class="col-sm-2 control-label">Address</label>
+									    	<div class="col-sm-10">
+									        	<input type="text" class="form-control" id="address1" name="address1" placeholder="address">
+									      	</div>
+							    		</div>
+							    		<div class="form-group">
 									    	<label for="phone" class="col-sm-2 control-label">Phone</label>
 									    	<div class="col-sm-10">
 									        	<input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">

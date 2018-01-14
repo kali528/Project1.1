@@ -7,7 +7,12 @@ use Illuminate\Database\Eloquent\Model;
 class Customer extends Model
 
 {
-	protected $table = 'customers'; 
+	protected $table = 'customers';
+
+	public function address()
+	{
+		$this->hasMany('App\address');
+	} 
 
     public function getCustomers()
     {
@@ -15,4 +20,5 @@ class Customer extends Model
     	
     	return $customers;
     }
+
 }
