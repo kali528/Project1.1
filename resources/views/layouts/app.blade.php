@@ -601,22 +601,8 @@
 		<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 		<script src="{{URL::asset('AdminLTE-2.4.2/dist/js/pages/dashboard.js')}}"></script>
 		<!-- AdminLTE for demo purposes -->
-		<script src="{{URL::asset('AdminLTE-2.4.2/dist/js/demo.js')}}"></script>
-		<script>
-			$(function () {
-
-				$('#example1').DataTable({
-				'paging'      : true,
-				'lengthChange': true,
-				'searching'   : true,
-				'ordering'    : true,
-				'info'        : true,
-				'autoWidth'   : false
-				});
-			});
-			$(document).ready(function(){
-				$("#example1_filter").addClass("pull-right");
-			})
-		</script>
+		<!-- <script src="{{URL::asset('AdminLTE-2.4.2/dist/js/demo.js')}}"></script> -->
+		<!-- main js -->
+		<script src="{{URL::asset('js/main.js')}}"></script>
 	</body>
 </html>

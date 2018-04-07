@@ -33,7 +33,7 @@ class User extends Authenticatable
 
     public function getUsers()
     {
-        $users = User::select('name', 'email')->get();
+        $users = User::select('id','name','email')->get();
         return $users;
     }
 }
