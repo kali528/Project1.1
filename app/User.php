@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'passwor',
     ];
 
     /**
@@ -33,7 +33,13 @@ class User extends Authenticatable
 
     public function getUsers()
     {
-        $users = User::select('name', 'email')->get();
+        $users = User::select('id','name','email')->get();
+        return $users;
+    }
+
+    public function getUserById($id)
+    {
+        $users = User::where('id', $id)->get();
         return $users;
     }
 }

@@ -161,7 +161,7 @@
               Expose author name in posts
               <input type="checkbox" class="pull-right" checked>
             </label>
-
+<h1>afaffds</h1>
             <p>
               Allow the user to show his name in blog posts
             </p>
@@ -241,5 +241,7 @@
 <script src="AdminLTE-2.4.2/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="AdminLTE-2.4.2/dist/js/demo.js"></script>
+<!-- main js -->
+<script src="js/main.js"></script>
 </body>
 </html>
