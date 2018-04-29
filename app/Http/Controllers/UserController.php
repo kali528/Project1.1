@@ -14,26 +14,34 @@ class UserController extends Controller
      */
     public function index()
     {
-        $user = new User;
-        $users = $user->getUsers();
+        
 
         return view('users.index', compact('users'));
     }
-//TODO finish user's functionallity 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
+    public function fillUsersTable()
+    {
+        $user = new User;
+        $users = $user->getUsers();
+        $users = datatables()->of($users)->make();
+        
+        return $users;     
+    }
+        //TODO finish user's functionallity 
+            /**
+             * Show the form for creating a new resource.
+             *
+             * @return \Illuminate\Http\Response
+             */
+            public function create()
+            {
+                // 
+            }
+        
+            /**
+             * Store a newly created resource in storage.
+             *
+             * @pa"ram  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -60,7 +68,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $user = new User;
+        $user = $user->getUserById($id);
+
+        return view('users.edit', compact('user'));  
     }
 
     /**
@@ -72,7 +84,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+       
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+        
+
+        return Redirect('users');
     }
 
     /**
