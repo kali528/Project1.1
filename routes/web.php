@@ -22,6 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/users', 'UserController@index')->middleware('auth');
 Route::get('/users/table', 'UserController@fillUsersTable')->middleware('auth');
+Route::get('/users/{id}/edit', 'UserController@edit')->middleware('auth');
+Route::post('/users/{id}', 'UserController@update')->middleware('auth');
+
 
 Route::get('/customers', 'CustomerController@index')->middleware('auth');
 Route::get('/customers/create', 'CustomerController@create')->middleware('auth');

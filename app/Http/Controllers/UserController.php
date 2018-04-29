@@ -35,7 +35,7 @@ class UserController extends Controller
              */
             public function create()
             {
-                //
+                // 
             }
         
             /**
@@ -68,7 +68,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        $user = new User;
+        $user = $user->getUserById($id);
+
+        return view('users.edit', compact('user'));  
     }
 
     /**
@@ -80,7 +84,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = User::findOrFail($id);
+       
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+        
+
+        return Redirect('users');
     }
 
     /**
