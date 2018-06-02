@@ -35,7 +35,13 @@ class UserController extends Controller
              */
             public function create()
             {
-                //
+            
+                
+                // if ($_POST['password'] === $_POST['password_confirm'])
+                // {
+                //     dump($_POST);
+                // }
+                return view('users.create');
             }
         
             /**
@@ -46,7 +52,24 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if (isset($request->password) && isset($request->password_confirm) && isset($request->email))
+        {
+            if ($request->password === $request->password_confirm)
+            {
+                $user = new User;
+                $user->name = $request->name;
+                $user->email = $request->email;
+                $user->password = bcrypt($request->password);
+                $user->save();
+
+                return redirect()->action('UserController@index');
+            }
+        }
+        else
+        {
+            return redirect()->action('UserController@create');
+        }
+        
     }
 
     /**
@@ -68,7 +91,10 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = new User;
+        $user = $user->findOrFail($id);
+
+        return view('users.edit', compact('user'));
     }
 
     /**
@@ -78,9 +104,16 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
-        //
+        $user = new User;
+        $user = $user->findOrFail($id);
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->save();
+
+        return redirect()->action('UserController@index');
     }
 
     /**

@@ -47,5 +47,17 @@ $(document).ready(function() {
  			$modal.modal('hide');
  		});
     });
-} );
+
+    $('#example tbody').on('click', '.btn-success', function () {
+        var data = table.row( $(this).parents('tr') ).data();
+        var $this = $(this);
+        var id = $this.attr('data-id');
+ 		$(location).attr('href', 'users/'+id+'/edit');
+    });
+
+    $("input#password").attr("autocomplete","off");
+    $("input#password_confirm").attr("autocomplete","off");
+    $("input#email").attr("autocomplete","off");
+});
+
 

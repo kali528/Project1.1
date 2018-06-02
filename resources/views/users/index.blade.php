@@ -21,7 +21,6 @@
 			<!-- /.box-header -->
 			<div class="box-body">
 				<div id="body-content">
-				
 				 	<table id="example" class="display" width="100%" cellspacing="0">
 				        <thead>
 				            <tr>
@@ -32,7 +31,6 @@
 				            </tr>
 				        </thead>
 					</table>
-					
 				</div>			  
 			</div>
 			<!-- /.box-body -->

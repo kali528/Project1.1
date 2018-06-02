@@ -320,11 +320,24 @@
 				    	</a>
 				    </li>
 				    <li class="header">ADMINISTRATION</li>
-					<li>
-				    	<a href="/users">
-				    		<i class="fa fa-users"></i> <span>Users</span>
-				    	</a>
-				    </li>				    
+				    <li class="treeview">
+			          <a href="#">
+			            <i class="fa fa-users"></i> <span>Users</span>
+			            <span class="pull-right-container">
+			            	<i class="fa fa-angle-left pull-right"></i>
+			            </span>
+			          </a>
+			          <ul class="treeview-menu" style="display: none;">
+			            <li>
+					    	<a href="/users">
+					    		<i class="fa fa-users"></i> <span>Users</span>
+					    	</a>
+					    	<a href="/users/create">
+					    		<i class="fa fa-users"></i> <span>Create User</span>
+					    	</a>
+					    </li>
+			          </ul>
+			        </li>			    
 				  </ul>
 				</section>
 				<!-- /.sidebar -->
